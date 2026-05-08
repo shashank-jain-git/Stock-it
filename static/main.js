@@ -249,12 +249,12 @@ function getMACDSignal(macd, signal) {
 
     const diff = macd - signal;
 
-    if (diff > 1) return { label: "Strong Buy", color: "#16a34a", angle: 150 };
-    if (diff > 0) return { label: "Buy", color: "#22c55e", angle: 120 };
-    if (Math.abs(diff) < 0.05) return { label: "Neutral", color: "#9ca3af", angle: 90 };
-    if (diff < -1) return { label: "Strong Sell", color: "#dc2626", angle: 30 };
+    if (diff > 1) return { label: "Strong Buy", color: "#16a34a", angle: 72 };
+    if (diff > 0) return { label: "Buy", color: "#22c55e", angle: 36 };
+    if (Math.abs(diff) < 0.05) return { label: "Neutral", color: "#9ca3af", angle: 0 };
+    if (diff < -1) return { label: "Strong Sell", color: "#dc2626", angle: -72 };
 
-    return { label: "Sell", color: "#f97316", angle: 60 };
+    return { label: "Sell", color: "#f97316", angle: -36 };
 }
 // Below is a simple function to determine ADX signal based on standard thresholds. It returns a label, color, and angle for the ADX signal which can be used for frontend display or future enhancements.
 function getADXSignal(adx) {
